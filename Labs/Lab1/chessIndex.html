@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic' rel='stylesheet' type='text/css'>
+    <script src="practise.js"></script>
+    <title>CHESSDEX</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row">
+                <ul class="main-nav">
+                    <li><a href="#sectn">Facts</a></li>
+                    <li><a href="#sctns">Play</a></li>
+                    <li><a href="https://cardgames.io/chess/#rules">RULES</a></li>
+                    <li><a href="#">Exit</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="hero-textbox">
+            </br></br></br></br></br></br></br></br></br></br></br>
+            <h1>Move in silence</h1>
+            <h1>only speak when it is time to say CHECKMATE!</h1>
+        </div>
+    </header>
+
+    <section class="section-features" id="sectn">
+        <div class="row">
+            <div class="row">
+                <dl>
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>Larger Than Life</h3>
+                        </dt>
+                        <dd>
+                            <p>The number of potential chess games is vaster than all the estimated atoms in the universe combined! That’s about 10^80
+                            whereas the number of different chess game possibilities is 10^120. Wow, incredible to say the least!
+                            </p>
+                        </dd>
+                    </div>
+
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>King’s Game</h3>
+                        </dt>
+                        <dd>
+                            <p>Chess was initially known as the ‘Game of Kings’ in India where it originated, since it was initially played by royalty
+                            centuries ago. The game was a common pastime of monarchs and nobles in the 12th century and even named its playing
+                            pieces (pawns) after royal or honored positions, including knight, king, queen, and bishop.</p>
+                        </dd>
+                    </div>
+
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>‘Checkmate’</h3>
+                        </dt>
+                        <dd>
+                            <p>The word ‘checkmate’ is derived from the Arabic word ‘shah mat’, which means ‘the king is dead (helpless)’ in English.
+                            True chess players will not say ‘checkmate’ to an opponent but rather simply extend their hand, shake and say ‘good
+                            game’.
+                            </p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section-photos">
+<div class="row">
+        <ul class="photo-showcase clearfix">
+            <li>
+                <figure class="g-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1580541832626-2a7131ee809f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=756&q=80">
+                </figure>
+            </li>
+
+            <li>
+                <figure class="g-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1585038021831-8afd9f9ab27f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGNoZXNzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                </figure>
+            </li>
+
+            <li>
+                <figure class="g-photo">
+                    <img
+                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202002/chess.jpeg?a2.ax0zTASavqcDDp.quf9uJVT7nXUwN&size=650:433">
+                </figure>
+            </li>
+
+            <li>
+                <figure class="g-photo">
+                    <img
+                        src="https://www.eaie.org/.imaging/mte/eaie-theme/width-820-not-expanding/dam/images/blog-images/2020/1000x667_Blog_ChessQueen.jpg/jcr:content/1000x667_Blog_ChessQueen.jpg">
+                </figure>
+            </li>
+        </ul>
+</div>
+    </section>
+
+    <section class="section-steps" id="sctns">
+        <h2>Game Visualiztion</h1>
+            <div class="row">
+                <iframe src="https://cardgames.io/chess/" name="iframe_a" height="400px" width="100%"
+                    title="Iframe"></iframe>
+                <p style="text-align:center;"><a href="https://cardgames.io/chess/" target="iframe_a">Start Game</a></p>
+            </div>
+    </section>
+
+    <section class="section-steps" id="sctns">
+        <h2>Generate random opponent</h1>
+            <div class="row" style="text-align: center;">
+                <canvas id="myCanvas" width="500%" height="100px" style="border:1px solid #d3d3d3;text-align: center;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+                
+                <p><button onclick="myCanvas()">Generate</button></p>
+            
+            </div>
+    </section>
+    
+
+    <section class="section-steps" id="sctns">
+        <h2>LET'S PLAY</h1>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <img src="chess-pieces2.jpg" height=350 width=500 alt="Chess Game" usemap="#workmap">
+                    <map name="workmap">
+                        <area shape="circle" coords="390,145,10" alt="Start Game" href="https://cardgames.io/chess/">
+                    </map>
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <h4>To start the game </h4>
+                    </br>
+                    <h5>Follow the instruction below</h5>
+                    </br>
+
+                    <ol type="1">
+                        <div class="works-step">
+                            <li style="margin-left: 20px;">
+                                <p>In the chess bord to the right</a></p>
+                            </li>
+                        </div>
+
+                        <div class="works-step">
+                            <li style="margin-left: 20px;">
+                                <p>Place the cursor on "8E"</p>
+                            </li>
+                        </div>
+
+                        <div class="works-step">
+                            <li style="margin-left: 20px;">
+                                <p>Click and enjoy the brain ride !</p>
+                            </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+    </section>
+
+    <section class="section-steps" id="sctns">
+        <h2>Game Ranking</h1>
+        <div class="row">
+
+            <table id="tb" style="width:100%">
+            <tr>
+                <th>
+                    <p>Name</p>
+                </th>
+                <th>
+                    <p>Ranking</p>
+                </th>
+            </tr>
+            <tr>
+                <td rowspan="2">Rajkumar</td>
+                <td>World Rank : 2020</td>
+            </tr>
+            <tr>
+                <td>State Rank : 20</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Laxmy</td>
+                <td>World Rank : 2018</td>
+            </tr>
+            <tr>
+                <td>State Rank : 18</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Hari</td>
+                <td>World Rank : 2014</td>
+            </tr>
+            <tr>
+                <td>State Rank : 14</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Rohin</td>
+                <td>World Rank : 2041</td>
+            </tr>
+            <tr>
+                <td>State Rank : 41</td>
+            </tr>
+        </div>
+        </table>
+        </div>
+    </section>
+ 
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+/*------------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*removes the blue border chrome browser puts around elements when you click or focus on them.*/
+*:focus {outline: none;}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*Adding whitespace between sections for clarity. Will use padding instead of margin for that because we will add some background later.*/
+section {
+    padding: 80px 0; /*top&bottom left&right*/
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ------ HEADINGS ----- */
+
+h1, 
+h2,
+h3,h4,h5{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    font-size: 140%; /*We use percentage because this is responsive design*/
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-align:center;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/*This will be a solid line after all h2 elements.*/
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " "; /*Important - We must specify the content of the :after pseudo element*/
+    width: 100px;
+    margin: 0 auto; /*To center the line horizontally*/
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* ----- PARAGRAPHS ----- */
+/*Refer to the typography lesson*/
+.long-copy {
+    line-height: 145%; /*should be between 120% and 145%*/
+    width: 70%; /*With this, the text will not be centered anymore. Setting the margin will fix this.*/
+    margin-left: 15%; /*Will effectively center all the text*/
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ----- ICONS ----- */
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%; /*A line height in percent of the current font size. */
+    margin-right: 10px;
+    
+    /*Tip to align text next to icon font*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ----- LINKS ----- */
+
+a:link, 
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----- BUTTONS ----- */
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;/*inline-block elements are like inline elements but they can have a width and height*/
+    padding: 10px 30px;
+    font-weight: 300px;
+    text-decoration: none;
+    border-radius: 200px;
+    /*changing from THIS css to any other should not happen instantly*/
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit] {
+    border: 1px solid #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/*------------------------------------------*/
+/* HEADER */
+/*------------------------------------------*/
+
+header {
+    /*linear gradient added to make heading text more legible*/
+    background-image:url(bgnd.jpg);
+    background-size: cover;/*It is like zooming into the background image*/
+    background-position: center;
+    height: 70vh; /*100% of viewport*/
+    background-repeat: no-repeat;
+    background-size: 500px 220px;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px; /*Look at css for ".row"*/
+    top: 50%; /*Top and left are w.r.t the left edge of element. So, image will not be exactly centered*/
+    left: 50%;
+    margin: 0%;
+    
+    transform: translate(-50%, -50%); /*This moves the element by 50% of its width & height, thereby perfectly centering the box*/
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;/*Now, "content" below the img tag, can float around it.*/
+    margin-top: 60px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, 
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+
+/*------------------------------------------*/
+/* FEATURES */
+/*------------------------------------------*/
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+#sectn {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #00000044), url(/chess.jpg);
+}
+
+
+/*------------------------------------------*/
+/* Pics */
+/*------------------------------------------*/
+
+.section-photos {
+     background-color: #00000036;
+    padding: 0;
+}
+
+.photo-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.photo-showcase li {
+    display: block;
+    float: left;
+    width: 25%; 
+}
+
+.g-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden; 
+    background: #000;
+}
+
+.g-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s; 
+}
+
+.g-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03); 
+}
+
+/*------------------------------------------*/
+/* HOW IT WORKS */
+/*------------------------------------------*/
+
+.section-steps {
+    background-color: #00000036;
+}
+
+.steps-box {
+    margin-top: 30px; 
+}
+
+.steps-box:first-child {
+    text-align: right; /*Works for text, inline and inline-block elements.*/
+    padding-right: 3%;
+    margin-top: 30px;/*To align both the steps boxes better*/
+}
+
+.steps-box:last-child {
+    padding-left: 3%;
+    margin-top: 70px;/*To align both the steps boxes better*/
+}
+
+
+
+.works-step {
+    margin-bottom: 50px;
+    align-content: center;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /*To ensure that the number(in div) can be beside the text and not cause a line break.*/
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+#tb {
+    align-items: center;
+    background-color: rgba(218, 181, 19, 0.918);
+    margin-bottom: 20px;
+  }
+  table, th, td {
+  border: 1px solid black;
+  }
+
+  td,
+  th {
+    padding: 20px;
+    text-align: center;
+    color: rgb(3, 41, 8);
+  }
