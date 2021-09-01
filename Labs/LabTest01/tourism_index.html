@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic' rel='stylesheet' type='text/css'>
+    <script src="practise.js"></script>
+    <title>India Tourism</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="row">
+                <ul class="main-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">AboutUs</a></li>
+                    <li><a href="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/gallery.html">Gallery</a></li>
+                    <li><a href="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/login.html">Login</a></li>
+                    <li><a href="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/register.html">SignUp</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="hero-textbox">
+            </br></br></br></br></br></br></br></br></br></br></br>
+            <h1>Its better to see something once</h1>
+            <h1>Than hear about it thousand times, So lets Travel!</h1>
+        </div>
+    </header>
+
+    <section class="section-features" id="sectn">
+        <div class="row">
+            <div class="row">
+                <dl>
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>Taj Mahal</h3>
+                        </dt>
+                        <dd>
+                            <img src="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/tour1.jpeg" alt="Workplace"
+                                usemap="#workmap" width="350" height="220">
+                            
+                            <map name="workmap">
+                                <area shape="rect" coords="34,44,270,350" alt="Computer"
+                                    href="https://whc.unesco.org/en/list/252/">
+                            </map>
+                            <p>An immense mausoleum of white marble, built in Agra between 1631 and 1648 by order of the Mughal emperor Shah Jahan in
+                            memory of his favourite wife, the Taj Mahal is the jewel of Muslim art in India and one of the universally admired
+                            masterpieces of the world's heritage.
+                            </p>
+                            <i class="fa fa-map" onClick="document.getElementById('audio_play').play(); return false;"></i>
+                            <a onClick="getLocation(); return false;" href="#">GeoLocation</a>
+                            <p id="demo" style="color: rgb(0, 0, 0);"></p>
+                        </dd>
+                    </div>
+
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>Statue of unity</h3>
+                        </dt>
+                        <dd>
+                            <img src="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/tour2.jpeg" alt="Workplace"
+                                usemap="#workmap" width="350" height="220">
+                            
+                            <map name="workmap">
+                                <area shape="rect" coords="34,44,270,350" alt="Computer"
+                                    href="https://www.incredibleindia.org/content/incredible-india-v2/en/popular-in-india/statue-of-unity.html">
+                            </map>
+                            <p>It’s huge, almost gigantic! That is the first reaction most people have as they speed down the winding road leading to
+                            the towering Statue of Unity (SoU). A long bridge connects the mainland to the Sadhu Bet Island, on which the statue
+                            stands. The legacy of Sardar Vallabhbhai Patel, India’s Iron Man, lives on in the form of this massive statue dominating the
+                            Narmada river basin.</p>
+                            <i class="fa fa-map" onClick="document.getElementById('audio_play').play(); return false;"></i>
+                            <a onClick="getLocation(); return false;" href="#">GeoLocation</a>
+                            <p id="demo" style="color: rgb(0, 0, 0);"></p>
+                        </dd>
+                    </div>
+
+                    <div class="col span-1-of-3 box">
+                        <dt>
+                            <h3>Chola Temple</h3>
+                        </dt>
+                        <dd>
+                            <img src="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/tour3.jpg" alt="Workplace"
+                                usemap="#workmap" width="350" height="220">
+                            
+                            <map name="workmap">
+                                <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://wonderthatwasindia.blogspot.com/2018/04/marvel-in-granite-brihadeshwara-temple.html">
+                            </map>
+                            <p>The Great Living Chola Temples were built by kings of the Chola Empire, which stretched over all of south India and the
+                            neighbouring islands. The site includes three great 11th- and 12th-century Temples: the Brihadisvara Temple at
+                            Thanjavur, the Brihadisvara Temple at Gangaikondacholisvaram and the Airavatesvara Temple at Darasuram.
+                            </p>
+                            <i class="fa fa-map" onClick="document.getElementById('audio_play').play(); return false;"></i>
+                            <a onClick="getLocation(); return false;" href="#">GeoLocation</a>
+                            <p id="demo" style="color: rgb(0, 0, 0);"></p>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+
+        </div>
+
+    </section>
+
+     <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude:" + position.coords.latitude +
+                "<br>Longitude:" + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>

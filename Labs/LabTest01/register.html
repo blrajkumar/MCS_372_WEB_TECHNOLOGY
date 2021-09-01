@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="inde.css">
+<title>Tourism Sign Up</title>
+
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="/Users/blraj/Desktop/Github/MCS_372/MCS_372_WEB_TECHNOLOGY/Labs/LabTest01/tourism_index.html">
+            <div class="banner">
+                <h1>India Tourism SignUp Form</h1>
+            </div>
+            <div class="item">
+                <p>Name</p>
+                <div class="name-item">
+                    <input type="text" name="name" placeholder="First" required/>
+                    <input type="text" name="name" placeholder="Last" required/>
+                </div>
+            </div>
+            <div class="item">
+                <p>Contact Info</p>
+                <div class="name-item">
+                    <input type="text" name="email" placeholder="Email" required />
+                    <input type="text" name="phone" placeholder="Phone" required />
+                </div>
+            </div>
+        
+            <div class="item">
+                <p>Contact Address</p>
+                <input type="text" name="name" placeholder="Street address" required/>
+                <input type="text" name="name" placeholder="Street address line 2" />
+                <div class="city-item">
+                    <input type="text" name="name" placeholder="City" required/>
+                    <input type="text" name="name" placeholder="Region"required />
+                    <input type="text" name="name" placeholder="Postal / Zip code"required />
+                    <select>
+                        <option value="">Country</option>
+                        <option value="1">India</option>
+                        <option value="2">SriLanka</option>
+                        <option value="3">Bangladesh</option>
+                        <option value="4">Pakisthan</option>
+                        <option value="5">Malaysia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="question">
+                <p>Select favorite tourist spot</p>
+                <div class="question-answer">
+                    <div>
+                        <input type="radio" value="none" id="radio_1" name="vehicle" />
+                        <label for="radio_1" class="radio"><span>Taj Mahal</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_2" name="vehicle" />
+                        <label for="radio_2" class="radio"><span>Statue of Unity</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_3" name="vehicle" />
+                        <label for="radio_3" class="radio"><span>Chola Temple</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_4" name="vehicle" />
+                        <label for="radio_4" class="radio"><span>Red-Fort</span></label>
+                    </div>
+                    <div>
+                        <input type="radio" value="none" id="radio_5" name="vehicle" />
+                        <label for="radio_5" class="radio other"><span>India Gate</span></label>
+                    </div>
+                </div>
+            </div>           
+
+            <div class="item">
+                <p></p> <label for="Dateofbirth">Select Date of Birth</label>
+                <input type="date" id="dateofbirth" name="dateofbirth"  max="2013-12-30">
+            </div>
+            </div>
+            <div class="btn-block">
+                <button type="submit" href="">SignUp</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
