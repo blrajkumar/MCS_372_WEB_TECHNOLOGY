@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE Crypto SYSTEM "wallet.dtd">
+<Trader>
+<currency>
+<cname> BTC </cname>
+<price> $44000</price>
+<token> 0.0001 </token>
+<total> $4 </total>
+</currency>
+
+<currency>
+<cname> COTI </cname>
+<price> $0.34 </price>
+<token> 586 </token>
+<total> $178 </total>
+</currency>
+
+<currency>
+<cname> AGLD </cname>
+<price> $4.4 </price>
+<token> 36 </token>
+<total> $166 </total>
+</currency>
+
+<currency>
+<cname> LOCG </cname>
+<price> $0.40 </price>
+<token> 1000 </token>
+<total> $400 </total>
+</currency>
+
+<currency>
+<cname> CKB  </cname>
+<price> $0.02 </price>
+<token> 10000 </token>
+<total> $200 </total>
+</currency>
+
+</Trader>

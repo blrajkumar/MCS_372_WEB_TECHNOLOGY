@@ -1,0 +1,50 @@
+/*--currency.css- a style sheet for the students.xml document */
+currency{
+    display: block;
+    margin-top: 15px;
+    margin-left: 100px;
+    margin-right: 1500px;
+    padding-left: 100px;
+    background-color: #000;
+    border-width: 10pt;
+    border: groove;
+border-color:rgb(229, 255, 0) ;}
+
+cname{
+    display: block;
+    margin-left: 08px;
+    margin-right: 1300px;
+    padding-top: 15px;
+    margin-top: 30pt;
+    text-decoration: solid;
+    color: rgb(229, 255, 0);
+    text-align: center;
+    font-size: 21pt;}
+
+price{
+    display: block;
+    margin-left: 10px;
+    margin-right: 1300px;
+    text-decoration: solid;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18pt;}
+
+token{
+    display: block;
+    margin-left: 10px;
+    margin-right: 1300px;
+    text-decoration: solid;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18pt;}
+
+total{
+    display: block;
+    margin-left: 10px;
+    margin-right: 1300px;
+    text-decoration: solid;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18pt;
+    padding-bottom: 10px;}

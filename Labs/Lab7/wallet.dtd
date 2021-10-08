@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<!--currency.dtd-a document type definition for the currency.xml-->
+<!ELEMENT Traders (currency+)>
+<!ELEMENT currency (cname,price,token,total)>
+<!ELEMENT cname (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT token (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
