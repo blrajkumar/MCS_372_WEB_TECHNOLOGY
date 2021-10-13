@@ -11,6 +11,15 @@
             document.getElementById(elemId).innerHTML = hintMsg;
         }
 
+        function passNote()
+        {
+            alert("Please include atleast one special character! To make the password stronger");
+        }
+
+        function tradeType1() {
+                alert("This is for daily spot trading!");
+            }
+
         // Defining a function to validate form 
         function validateForm() {
             // Retrieving the values of form elements 
@@ -145,7 +154,7 @@
         </div>
         <div class="row">
             <label>Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" onclick="passNote()">
             <div class="error" id="passErr"></div>
         </div>
         <div class="row">
