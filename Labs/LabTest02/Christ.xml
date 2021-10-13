@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE Christ SYSTEM "student.dtd">
+<?xml-stylesheet type="text/xsl" href="Rules.xsl" ?>
+<Christ>
+
+<cs>
+<sname> Rajkumar </sname>
+<sbranch> Computer Science</sbranch>
+<scollage> York University </scollage>
+<semail> kumarraj@my.yorku.ca </semail>
+</cs>
+
+<cs>
+<sname> Laxmi </sname>
+<sbranch> Data Science</sbranch>
+<scollage> Christ University </scollage>
+<semail> laxmi@ds.christ.in </semail>
+</cs>
+
+<cs>
+<sname> Hari </sname>
+<sbranch> Computer Application</sbranch>
+<scollage> Krishna University </scollage>
+<semail> hari@ca.krishna.in </semail>
+</cs>
+
+</Christ>

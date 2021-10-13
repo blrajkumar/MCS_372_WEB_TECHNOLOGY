@@ -1,0 +1,8 @@
+<?xml version = "1.0"?>
+<!--student.dtd-a document type definition for the Christ.xml-->
+<!ELEMENT Christ (cs+)>
+<!ELEMENT cs (sname,sbranch,scollage,semail)>
+<!ELEMENT sname (#PCDATA)>
+<!ELEMENT sbranch (#PCDATA)>
+<!ELEMENT scollage (#PCDATA)>
+<!ELEMENT semail (#PCDATA)>
