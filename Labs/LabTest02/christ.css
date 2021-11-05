@@ -2,8 +2,8 @@
 cs{
     display: block;
     margin-top: 15px;
-    margin-left: 100px;
-    margin-right: 1500px;
+    margin-left: 250px;
+    margin-right: 200px;
     padding-left: 100px;
     background-color: #000;
     border-width: 10pt;
@@ -18,33 +18,29 @@ sname{
     margin-top: 30pt;
     text-decoration: solid;
     color: rgb(229, 255, 0);
-    text-align: center;
+    text-align: left;
     font-size: 21pt;}
 
 sbranch{
     display: block;
     margin-left: 10px;
-    margin-right: 1300px;
     text-decoration: solid;
     color: rgb(255, 255, 255);
-    text-align: center;
+    text-align: left;
     font-size: 18pt;}
 
 scollage{
     display: block;
     margin-left: 10px;
-    margin-right: 1300px;
     text-decoration: solid;
     color: rgb(255, 255, 255);
-    text-align: center;
+    text-align: left;
     font-size: 18pt;}
-
 semail{
     display: block;
     margin-left: 10px;
-    margin-right: 1300px;
+    margin-bottom: 30px;
     text-decoration: solid;
     color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 18pt;
-    padding-bottom: 10px;}
+    text-align: left;
+    font-size: 18pt;}

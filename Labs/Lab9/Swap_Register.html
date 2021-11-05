@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gateways Registration</title>
+    <title>PanCakeSwap Registration</title>
     <link rel="stylesheet" type="text/css" href="signUp.css" />
     <script>
 
         var today = new Date();
         var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-
+            
         function setCookie(name, value) {
             document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
         }
@@ -19,12 +19,9 @@
             document.getElementById(elemId).innerHTML = hintMsg;
         }
 
-        function passNote() {
+        function passNote()
+        {
             alert("Please include atleast one special character! To make the password stronger");
-        }
-
-        function tradeType1() {
-            alert("This is for daily spot trading!");
         }
 
         // Defining a function to validate form 
@@ -32,20 +29,19 @@
             // Retrieving the values of form elements 
             var name = document.contactForm.name.value;
             var email = document.contactForm.email.value;
-            var branch = document.contactForm.branch.value;
-            var clgname = document.contactForm.collage.value;
+            var referral = document.contactForm.referral.value;
             var address = document.contactForm.address.value;
             var state = document.contactForm.state.value;
             var country = document.contactForm.country.value;
             var age = document.contactForm.age.value;
             var gender = document.contactForm.gender.value;
-            var mobile = document.contactForm.mobile.value;
+            var mobile = document.contactForm.mobile.value;         
             var username = document.contactForm.username.value;
             var pass = document.contactForm.password.value;
-
+         
 
             // Defining error variables with a default value
-            var nameErr = emailErr = branchErr = collageErr = addressErr = stateErr = countryErr = true;
+            var nameErr = emailErr = referralErr = addressErr = stateErr = countryErr =  true;
             var ageErr = genderErr = mobileErr = usernameErr = passErr = true;
 
 
@@ -76,25 +72,17 @@
                 }
             }
 
-            // Validate branch
-            if (branch == "Select") {
-                printError("branchErr", "Please select your branch");
+           
+            // Validate referral id
+            if (referral == "") {
+                printError("referralErr", "Please enter your Referral ID");
             } else {
-                printError("branchErr", "");
-                branchErr = false;
-            }
-            
-
-            // Validate collage name
-            if (clgname == "") {
-                printError("collageErr", "Please enter your collage name");
-            } else {
-                var regex = /^[A-Z][a-zA-Z\s]+$/;
-                if (regex.test(clgname) === false) {
-                    printError("collageErr", "Please enter a valid collage name");
+                var regex = /^[0-9]{7}$/;
+                if (regex.test(referral) === false) {
+                    printError("referralErr", "Please enter a valid Referral ID");
                 } else {
-                    printError("collageErr", "");
-                    collageErr = false;
+                    printError("referralErr", "");
+                    referralErr = false;
                 }
             }
 
@@ -163,9 +151,9 @@
                 if (age <= 0) {
                     printError("ageErr", "Please enter a valid age");
                 }
-                else{
+                else {
                     printError("ageErr", "");
-                    genderErr = false;
+                    ageErr = false;
                 }
             }
 
@@ -184,31 +172,31 @@
 
 
             // Prevent the form from being submitted if there are any errors
-            if ((nameErr || emailErr || branchErr || collageErr || addressErr || stateErr || countryErr || ageErr || genderErr || mobileErr || usernameErr || passErr) == true) {
+            if ((nameErr || emailErr || referralErr || addressErr || stateErr || countryErr || ageErr || genderErr || mobileErr || usernameErr || passErr) == true) {
                 return false;
             } else {
 
                 //setCookie("Username", username);
                 //setCookie("Phonenumber", mobile);
-                // Creating a string from input data for preview
-                var dataPreview = "You've entered the following details: \n" +
-                    "Full Name: " + name + "\n" +
-                    "Email Address: " + email + "\n" +
-                    "Password: " + pass + "\n" +
-                    "Mobile Number: " + mobile + "\n" +
-                    "Country: " + country + "\n" +
-                    "Gender: " + gender + "\n";
+                //Creating a string from input data for preview
+               var dataPreview = "You've entered the following details: \n" +
+                  "Full Name: " + name + "\n" +
+                   "Email Address: " + email + "\n" +
+                   "Password: " + pass + "\n" +
+                   "Mobile Number: " + mobile + "\n" +
+                   "Country: " + country + "\n" +
+                   "Gender: " + gender + "\n";
                 // Display input data in a dialog box before submitting the form
                 alert(dataPreview);
-                return true;
             }
         };
     </script>
 </head>
 
 <body>
-    <form name="contactForm" onsubmit="return validateForm()" action="./Gate_Login.html" method="post">
-        <h2>Gateways Registration Form</h2>
+        <img src="./hero.png" alt="Gateways" style="position:absolute; top:125px; left:30px; width:630px;height:430px;">
+        <form name="contactForm" onsubmit="return validateForm()" action="./Welcome.php" method="post">
+        <h2>PanCakeSwap SignUp</h2>
         <div class="row">
             <label>Full Name</label>
             <input type="text" name="name" pattern="[a-zA-Z]*">
@@ -220,19 +208,9 @@
             <div class="error" id="emailErr"></div>
         </div>
         <div class="row">
-            <label>Branch</label>
-            <select name="branch">
-                <option>Select</option>
-                <option>Computer Science</option>
-                <option>Computer Application</option>
-                <option>Data Science</option>
-            </select>
-            <div class="error" id="branchErr"></div>
-        </div>
-        <div class="row">
-            <label>Collage Name</label>
-            <input type="text" name="collage">
-            <div class="error" id="collageErr"></div>
+            <label>Referral Id</label>
+            <input type="text" name="referral">
+            <div class="error" id="referralErr"></div>
         </div>
         <div class="row">
             <label>Address</label>
