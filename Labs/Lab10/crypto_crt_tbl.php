@@ -30,31 +30,20 @@ if ($con->connect_errno) {
     exit();
 }
 
-$query = "DROP TABLE IF EXISTS currencies";
+$query = "DROP TABLE IF EXISTS people";
 execute_query($query, $con);
 
-$query = "CREATE TABLE currencies(id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(255), price INT)";
+$query = "CREATE TABLE people(people_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(255), last_name VARCHAR(255, mid_name VARCHAR(255), adress VARCHAR(255),contact VARCHAR(255), comment VARCHAR(255))";
 execute_query($query, $con);
 
-$query = "INSERT INTO currencies(name, price) VALUES('ADA', 2)";
+$query = "INSERT INTO people(first_name, last_name, mid_name, adress, contact, comment) VALUES('Raj', 'BL', 'Kumar', 'Kumar Nagar', 'raj@cs.in', 'Binance Wallet')";
 execute_query($query, $con);
 
-$query = "INSERT INTO currencies(name, price) VALUES('FLOW', 15)";
+$query = "INSERT INTO people(first_name, last_name, mid_name, adress, contact, comment) VALUES('Laxmy', 'LN', 'Narayan', 'Kumar Nagar', 'lax@cs.in', 'Huobi Wallet')";
 execute_query($query, $con);
 
-$query = "INSERT INTO currencies(name, price) VALUES('BTC', 60000)";
+$query = "INSERT INTO people(first_name, last_name, mid_name, adress, contact, comment) VALUES('Hari', 'VS', 'Prasath', 'Kumar Nagar', 'hari@cs.in', 'Kucoin Wallet')";
 execute_query($query, $con);
 
-$query = "INSERT INTO currencies(name, price) VALUES('LOCG', 450)";
-execute_query($query, $con);
-
-$query = "INSERT INTO currencies(name, price) VALUES('RSR', 9)";
-execute_query($query, $con);
-
-$query = "INSERT INTO currencies(name, price) VALUES('DOT', 64)";
-execute_query($query, $con);
-
-$query = "INSERT INTO currencies(name, price) VALUES('ICP', 134)";
-execute_query($query, $con);
 $con->close();
